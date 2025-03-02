@@ -1,0 +1,18 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite" // Choose either SQLite or PostgreSQL, not both
+  url      = "file:./dev.db" // Adjust the URL if you're using SQLite
+}
+
+// Model definition
+model User {
+  id       Int      @id @default(autoincrement()) // Added a primary key
+  name     String
+  email    String   @unique
+  rollno   Int
+  password String   // Corrected the type; Prisma doesn't support `varchar`
+}
+

@@ -1,0 +1,95 @@
+.container {
+  max-width: 800px;
+  margin: 20px auto;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+.h1 {
+  text-align: center;
+  color: #333;
+}
+
+.row {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.class {
+  position: relative; /* Added for tooltip positioning */
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 5px;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.class:hover {
+  background-color: #d3d3d3;
+  transform: scale(1.05);
+}
+
+.available {
+  background-color: #5cb85c;
+  color: #fff;
+}
+
+.ongoing {
+  background-color: #f0ad4e;
+  color: #fff;
+}
+
+.occupied {
+  background-color: #d9534f;
+  color: #fff;
+}
+
+.tooltip {
+  visibility: hidden;
+  opacity: 0;
+  width: 100px;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 1;
+  top: 100%;
+  left: 50%;
+  margin-left: -50px; /* Center the tooltip */
+  transition: visibility 0s, opacity 0.3s ease;
+}
+
+.class:hover .tooltip {
+  visibility: visible;
+  opacity: 1;
+}
+
+.legend {
+  margin-top: 20px;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 5px;
+}
+
+.legend-item span {
+  margin-left: 10px;
+}
+
+.legend-item .legend-box {
+  width: 20px;
+  height: 20px;
+  border-radius: 5px;
+}
